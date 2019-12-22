@@ -9,4 +9,85 @@ document.addEventListener("DOMContentLoaded", function () {
     Poniżej napisz kod rozwiązujący zadania
      */
 
-});
+     
+
+
+    function getDatasInfo(elements) { 
+        var array = [];
+    
+        for (let i = 0; i < array.length;i++ ) {
+            array.push(elements[i].dataset);
+        }  
+        console.Log(array); 
+    }
+    
+    getDatesInfo(links);
+
+    console.log(homeElement);
+    console.log(childElements);
+    console.log(banner);
+    console.log(blocks);
+    console.log(links);
+    for (i = 0; i < childElements.length; i++ ) {
+        console.log(childElements[i].tagName, childElements[i].classList);
+    }
+
+    for (i = 0; i < blocks.length; i++ ) {
+        console.log(blocks[i].tagName, blocks[i].classList);
+    }
+    for (i = 0; i < links.length; i++ ) {
+        console.log(links[i].tagName, links[i].classList);
+    }
+    
+    var blocksAll = document.querySelector('.blocks');
+
+    console.log(blocksAll.innerHTML);
+    console.log(blocksAll.outerHTML);
+
+    blocksAll.innerHTML = 'string nowy';
+
+    const mainFooter = document.querySelector('#mainFooter');
+
+    function getId(element) {
+        return element.id;
+    }
+
+    const testId = getId(mainFooter);
+    console.log(testId);
+
+    // 4
+
+    function geTags(elements) {
+        var array1 = [];
+
+        for (let i = 0; i<elements.classList.length; i++) { 
+            array1.push(elements[i].tagname);
+        }
+
+        return array1;
+    }
+
+    const test1 = getTags(childelements);
+    console.log(test1);
+
+    function getClassInfo(element) { 
+        var tab = [];
+        for ( var i = 0; i<banner.length; i++) {
+            tab.push(element[i].classList)
+        }
+        return tab;
+    }
+
+    console.log(getClassInfo(banner));
+
+    var allli = document.querySelectorAll('nav li');
+    function setDataDirection(elements) { 
+        for (let i = 0; i < elements.length; i++) { 
+            if(elements[i].getAttribute('data-direction')) {
+                elements[i].setAttribute('data-direction', 'top')
+            }
+        }
+    }
+
+    setDataDirection(allli);
+    });
