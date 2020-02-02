@@ -1,6 +1,6 @@
-var Robot = function (name) {
+function Robot (name) {
     this.name = name;
-    this.isFunctional = true;
+    this.isFunctional = false;
 }
 
 Robot.prototype.sayHi = function (toWho) {
@@ -8,12 +8,12 @@ Robot.prototype.sayHi = function (toWho) {
         console.log("Robot " + this.name + " greets " + toWho);
     }
     else {
-        console.log("Robot " + this.name + "is broken");
+        console.log("Robot " + this.name + " is broken");
     }
 };
 
 Robot.prototype.changeName = function (newname) {
-    console.log("Robot " + this.name + "changes name to " + newname);
+    console.log("Robot " + this.name + " changes name to " + newname);
     this.name = newname;
 };
 
@@ -22,7 +22,7 @@ Robot.prototype.fixIt = function () {
     console.log("Robot " + this.name + " was fixed");
 };
 
-var robotDick = new Robot ("Dick")
-robotDick.sayHi("Wojtek");
-robotDick.changeName("Bartek");
-robotDick.fixIt();
+const robot1 = new Robot('Kazek');
+robot1.sayHi('Maniek');
+robot1.changeName('Wiesiek');
+robot1.fixIt();
